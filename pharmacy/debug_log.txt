@@ -1,0 +1,8 @@
+Array
+(
+    [customer_name] => John
+    [sale_date] => 2025-03-27
+    [amount_paid] => 200
+    [cart] => [{"id":3,"name":"Cetrizine","price":20,"qty":10}]
+    [salesperson] => susan
+)

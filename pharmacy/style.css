@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #e2e2e2;
+    
+}
+
+
+.container {
+    background: #fff;
+    width: 450px;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+label {
+    font-size: 16px;
+    color: #757575;
+    margin-bottom: 5px; /* Add space between label and input */
+    display: block; /* Make the label a block element to ensure it takes full width */
+}
+
+input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    background: transparent;
+    color: #333;
+    margin-top: 5px; /* Add space between input and label */
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid hsl(327, 90%, 28%);
+}
+
+
+.recover {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.recover a {
+    text-decoration: none;
+    color: rgb(125, 125, 235);
+}
+
+.btn {
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    background: rgb(125, 125, 235);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #30336b;
+}
+
+.or {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+button {
+    background: none;
+    border: none;
+    color: rgb(125, 125, 235);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+/* Individual Card */
+/* General Card Style */
+.card {
+    background-color: #ffffff; /* Default color (white) */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    width: 450px;
+    height: 200px;
+    margin:10px ;
+   
+    transition: transform 0.3s ease;
+    color: #333;
+}
+
+/* Specific Card Background Colors */
+.card-sales {
+    background-color: #278d45; 
+}
+
+.card-profit {
+    background-color: #85314d; 
+}
+
+.card-low-stock {
+    background-color: #296fd8; 
+}
+
+.card-expired { 
+    background-color: #786bc1; 
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Card Title and Content Styling */
+.card h3 {
+    font-size: 20px;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 18px;
+    color: #333;
+}
+
+.card span {
+    font-weight: bold;
+    color: #080808;
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        width: 90%; /* Full width for smaller screens */
+        max-width: none; /* Remove max-width constraint */
+    }
+    
+}
+.table {
+    font-size: 16px; /* Increase font size */
+    margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+    text-align: center; /* Center align all content */
+    vertical-align: middle; /* Align vertically */
+    padding: 15px; /* Add padding for spacing */
+}
+th, td {
+    padding: 10px; /* Adjust cell padding */
+    text-align: left;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+th {
+    width: auto; /* Let browser handle column width */
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    padding: 20px;
+}
+
+.card-header {
+    background-color: #f8f9fa; /* Light gray header */
+    padding: 15px;
+    border-bottom: 1px solid #dee2e6; /* Add border */
+}
+
+.table-responsive {
+    max-height: 500px; /* Add scrolling for overflow */
+    overflow-y: auto;
+}
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+.chart-box.bar {
+    flex: 2; /* Bar chart takes more space */
+}
+.chart-box.doughnut {
+    flex: 1; /* Doughnut chart takes less space */
+}
+.chart-box {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+}
+canvas {
+    max-width: 90%;
+    height: 50px;
+}
+#doughnutChart {
+    max-width: 350px; /* Smaller doughnut chart */
+    height: 150px;
+}
+#barChart {
+    max-width: 100%; /* Larger bar chart */
+    height: 500px;
+}
+
+
+
+/* Style for the category table */
+.category-table {
+    width: 100%; /* Make the table full width */
+    max-width: 1200px;  /* Set a maximum width for larger tables */
+    margin: 0 auto; /* center the table */
+    
+    background-color: #ffffff; /* Set background color to white */
+    border-collapse: collapse; /* Remove gaps between borders */
+    margin-top: 30px; /* Add some space from the top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for a clean look */
+    border-radius: 8px; /* Add rounded corners */
+    overflow: hidden; /* Ensure borders stay clean */
+}
+
+.category-table th, .category-table td {
+    padding: 15px; /* Increase padding for better spacing */
+    text-align: left; /* Align text to the left */
+    border: 1px solid #ddd; /* Add light border for separation */
+}
+
+.category-table th {
+    background-color: #f8f9fa; /* Light gray header background */
+    font-weight: bold; /* Make header text bold */
+    color: #333; /* Darker text color for contrast */
+}
+
+.category-table td {
+    color: #555; /* Set darker text color */
+    word-wrap: break-word; /* Handle text wrapping for long content */
+}
+
+/* Adjust column width */
+.category-table th, .category-table td {
+    min-width: 200px; /* Set minimum column width */
+}
+.table-section {
+    width: 100%;
+    max-width: 1200px; /* Wider container */
+    margin: 0 auto; /* Center within the page */
+    padding: 20px; /* Optional padding */
+}
+.action-btns button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 5px;
+    color: #000000; /* Set icon color to black */
+}
+
+.action-btns button:hover {
+    color: #0a0909; /* Set icon color to black */
+}
+
+.action-btns i {
+    font-size: 16px; /* Adjust icon size */
+    color: #000000; /* Set icon color to black */
+}
+
+
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+    .category-table {
+        width: 100%; /* Ensure table fits on smaller screens */
+    }
+    .category-table th, .category-table td {
+        display: block; /* Stack table rows */
+        width: 100%; /* Full width for each cell */
+    }
+
+    
+}
+/* Ensures the button container is not stretched */
+.button-container {
+    display: flex;                 /* Use flexbox to control alignment */
+    justify-content: flex-end;     /* Aligns the button to the right */
+    margin-bottom: 15px;           /* Adds space between the button and table */
+}
+
+/* Style for the button itself */
+#addCategoryButton {
+    padding: 10px 20px;            /* Adjust button padding for better size */
+    margin-right: 0;               /* Optional: Prevent margin on the right */
+    width: auto;                   /* Ensures the button only takes the space it needs */
+    display: inline-block;         /* Prevent button from stretching */
+}
+
+
+
+.modal {
+    display: none; /* Hidden by default, will be triggered by JS */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; /* Add this to apply Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+    /* CSS file (styles.css) */
+.add-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Modal Header Customization */
+.modal-header {
+    background-color: #007bff;
+    color: #fff;
+    border-bottom: 2px solid #0056b3;
+}
+
+
+/* Button Customizations */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+#addDrugButton {
+    position: absolute;
+    top: 20px; /* Adjust this value to move it up or down */
+    right: 20px; /* Adjust this value to move it further to the right */
+    z-index: 1000; /* Ensures the button stays on top */
+}
+
+
+
+
+
